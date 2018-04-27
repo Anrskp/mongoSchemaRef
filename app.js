@@ -36,22 +36,25 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // DB test
-/*
+
+// Create user
 let newUser = new user({
   name : "john"
 });
 
+// Add user
 user.addUser(newUser);
-*/
 
+// Create post
 let newPost = new post({
   content : "hello",
   author : "5ae2ffef6c6db43020829e77"
 });
 
+// Add post
 post.addPost(newPost);
 
-
+// Get all post with author info
 post.getAllPosts((err, post ) => {
   if(err) throw err;
   console.log(post)
